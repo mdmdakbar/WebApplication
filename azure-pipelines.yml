@@ -16,8 +16,6 @@ steps:
   displayName: 'Create GitHub Release'
   inputs:
     githubEndpoint: 'github mdmdakbar'
-
     repositoryName: mdmdakbar/WebApplication
-
     tagCreate: Build1
 
