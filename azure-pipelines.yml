@@ -10,37 +10,14 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-
+  
 steps:
-- task: NuGetToolInstaller@0
+- task: GithubCreateRelease@4
+  displayName: 'Create GitHub Release'
+  inputs:
+    githubEndpoint: 'github mdmdakbar'
 
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '$(solution)'
+    repositoryName: mdmdakbar/WebApplication
 
-- task: VSBuild@1
-  inputs:
-    solution: '$(solution)'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    tagCreate: Build1
 
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-    
-- task: PublishSymbols@2
-  inputs:
-    SearchPattern: '**\bin\**\*.pdb'
-    PublishSymbols: false
-    continueOnError: true
-
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: '$(system.defaultworkingdirectory)'
-    Contents: '**\bin\$(BuildConfiguration)\**'
-    TargetFolder: '$(build.artifactstagingdirectory)'
-
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)'
