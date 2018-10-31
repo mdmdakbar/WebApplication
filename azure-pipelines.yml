@@ -12,7 +12,7 @@ variables:
   buildConfiguration: 'Release'
   
 steps:
-- task: GithubCreateRelease@4
+- task: GithubCreateRelease@5
   displayName: 'Create GitHub Release'
   inputs:
     githubEndpoint: 'github mdmdakbar'
