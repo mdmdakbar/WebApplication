@@ -16,6 +16,6 @@ steps:
   displayName: 'Create GitHub Release'
   inputs:
     githubEndpoint: 'github mdmdakbar'
-    repositoryName: #self
+    repositoryName: 'mdmdakbar/webapplication
     tagCreate: BuildSelf
 
