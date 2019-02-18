@@ -12,10 +12,10 @@ variables:
   buildConfiguration: 'Release'
   
 steps:
-- task: GithubCreateRelease@8
+- task: GitHubRelease@0
   displayName: 'Create GitHub Release'
   inputs:
-    githubEndpoint: 'github mdmdakbar'
+    githubEndpoint: 'GitHub connection 1'
     repositoryName: 'mdmdakbar/webapplication'
     tag: BuildSelf
 
