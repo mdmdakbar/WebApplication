@@ -15,7 +15,6 @@ steps:
 - task: GitHubRelease@14
   displayName: 'GitHub release (create)'
   inputs:
-    gitHubConnection: 'github mdmdakbar'
     repositoryName: mdmdakbar/WebApplication
     tagSource: auto
 
