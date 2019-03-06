@@ -12,11 +12,9 @@ variables:
   buildConfiguration: 'Release'
   
 steps:
-- task: GitHubRelease@0
-  displayName: 'Create GitHub Release'
+- task: GitHubRelease@14
+  displayName: 'GitHub release (create)'
   inputs:
-    githubEndpoint: 'github oauth'
-    repositoryName: 'mdmdakbar/webapplication'
-    action: Delete
-    tag: 'wow'
+    gitHubConnection: 'github mdmdakbar'
+    repositoryName: mdmdakbar/WebApplication
 
