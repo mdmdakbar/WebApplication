@@ -17,4 +17,5 @@ steps:
   inputs:
     gitHubConnection: 'github mdmdakbar'
     repositoryName: mdmdakbar/WebApplication
+    tagSource: auto
 
