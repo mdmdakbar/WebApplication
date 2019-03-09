@@ -18,5 +18,4 @@ steps:
     gitHubConnection: 'github mdmdakbar'
     repositoryName: mdmdakbar/WebApplication
     tagSource: manual
-    tag: tag2
 
