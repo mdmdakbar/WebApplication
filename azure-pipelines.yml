@@ -17,4 +17,6 @@ steps:
   inputs:
     gitHubConnection: 'github mdmdakbar'
     repositoryName: mdmdakbar/WebApplication
+    action: edit
+    tag: tag1
 
