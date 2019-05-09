@@ -15,6 +15,6 @@ steps:
 - task: GitHubRelease@0
   displayName: 'GitHub release (create)'
   inputs:
-    gitHubConnection: 'github mdmdakbar'
+    gitHubConnection: 'GH YML'
     repositoryName: mdmdakbar/WebApplication
 
