@@ -14,3 +14,8 @@ steps:
     inputs:
       githubConnection: 'GH YML'
       repositoryName: mdmdakbar/WebApplication
+  - task: DownloadGitHubRelease@0
+    displayName: 'Download GitHub Release'
+    inputs:
+      connection: 'GH YML'
+      userRepository: '$(Build.Repository.Name)'
