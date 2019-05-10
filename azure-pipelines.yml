@@ -12,5 +12,5 @@ pool:
 steps:
   - task: GitHubRelease@0
     inputs:
-      githubConnection: 'new2'
+      githubConnection: 'GH YML'
       repositoryName: mdmdakbar/WebApplication
