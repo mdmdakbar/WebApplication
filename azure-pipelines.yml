@@ -1,20 +1,16 @@
-# .NET Desktop
-# Build and run tests for .NET Desktop or Windows classic desktop solutions.
-# Add steps that publish symbols, save build artifacts, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/apps/windows/dot-net
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- master
 
 pool:
-  vmImage: 'VS2017-Win2016'
+  vmImage: 'ubuntu-latest'
 
-variables:
-  solution: '**/*.sln'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
-  
 steps:
-- task: GitHubRelease@0
-  displayName: 'GitHub release (create)'
-  inputs:
-    gitHubConnection: 'GH YML'
-    repositoryName: mdmdakbar/WebApplication
-
+  - task: GitHubRelease@0
+    inputs:
+      githubConnection: 'GitHub mdmdakbar'
+      repositoryName: mdmdakbar/WebApplication
