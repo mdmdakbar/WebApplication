@@ -15,3 +15,8 @@ steps:
     inputs:
       connection: 'GH YML'
       userRepository: '$(Build.Repository.Name)'
+  - task: GitHubRelease@0
+    displayName: 'GitHub Release'
+    inputs:
+      githubConnection: 'new'
+      repositoryName: '$(Build.Repository.Name)'
