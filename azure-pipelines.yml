@@ -27,7 +27,7 @@ steps:
 - task: GitHubRelease@14
   displayName: 'GitHub release (create)'
   inputs:
-    gitHubConnection: 'GitHub connection 1'
+    githubConnection: 'GitHub connection 1'
     repositoryName: mdmdakbar/WebApplication
     tagSource: manual
     tag: Ak1
